@@ -40,7 +40,7 @@ export default function App() {
     event.preventDefault();
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=YOUR_API_KEY&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`
       );
       setCurrentWeather(response.data);
       setCityName("");
